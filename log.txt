@@ -1,0 +1,12 @@
+1688631346431: GET: /api/users
+1688631439622: GET: /api/users
+1688631458557: GET: /api/users/5
+1688631482628: GET: /api/users/9
+1688631566900: POST: /api/users/111
+1688631573879: POST: /api/users/111
+1688631584037: POST: /api/users/111
+1688631671791: ::1: POST: /api/users/189
+1688650732407: ::ffff:127.0.0.1: POST: /users
+1688650771558: ::ffff:127.0.0.1: POST: /api/users
+1688650789758: ::ffff:127.0.0.1: GET: /api/users
+1688650911876: ::ffff:127.0.0.1: GET: /api/users

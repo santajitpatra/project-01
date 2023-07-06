@@ -5,10 +5,25 @@ const app = express();
 const port = 8000;
 
 //Middleware - Plugin
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
+
+app.use((req, res, next) => {
+  fs.appendFile("log.txt", `${Date.now()}: ${req.ip}: ${req.method}: ${req.path}\n`, (err, data) => {
+    next();
+  });
+  // console.log("first request from middleware");
+  req.myUserName = "test"
+});
+
+// app.use((req, res, next) => {
+//   console.log("first request from middleware 2", req.myUserName);
+//   next();
+// });
 
 // REST API
 app.get("/api/users", (req, res) => {
+  res.setHeader('X-MyName', 'john doe');
+    // console.log("first route 2", req.myUserName);
   res.json(users);
 });
 
@@ -44,7 +59,7 @@ app.post("/api/users", (req, res) => {
   // console.log("body: ", body)
   users.push({ ...body, id: users.length + 1 });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-    return res.json({ statusbar: "pending", id: users.length});
+    return res.json({ statusbar: "pending", id: users.length });
   });
 });
 
