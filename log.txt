@@ -67,3 +67,21 @@
 1688662609018: ::1: GET: /api/users
 1688662626409: ::1: DELETE: /api/users/64a6eb824e7c5c1fe9d68721
 1688662648641: ::1: GET: /api/users
+
+1688677696258: ::1: GET: /api/users
+
+1688677700161: ::1: GET: /api/user
+
+1688677712109: ::1: GET: /api/users
+
+1688677753189: ::1: POST: /api/users
+
+1688677799904: ::1: POST: /api/users
+
+1688677847908: ::1: GET: /api/users
+
+1688677873855: ::1: GET: /api/users/64a72da7b60caeb410ade67f
+
+1688677911889: ::1: DELETE: /api/users/64a72da7b60caeb410ade67f
+
+1688677917976: ::1: GET: /api/users
